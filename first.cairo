@@ -1,14 +1,14 @@
-// Declare this file as a StarkNet contract.
+// Iniciando el contrato Starknet.
 %lang starknet
 
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 
-// Define a storage variable.
+// Definiendo las varaibles de estado/storage variable.
 @storage_var
 func balance() -> (res: felt) {
 }
 
-// Increases the balance by the given amount.
+// Función para incrementar el valor del balance.
 @external
 func increase_balance{
     syscall_ptr: felt*,
@@ -20,7 +20,7 @@ func increase_balance{
     return ();
 }
 
-// Returns the current balance.
+// Función para obtener el valor.
 @view
 func get_balance{
     syscall_ptr: felt*,
